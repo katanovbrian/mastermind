@@ -18,7 +18,7 @@ def play_game():
     game = True
     shuffle(colors)
     solution = choices(colors,k=4)
-    print(solution)
+    # print(solution)
     print("initializing...")
     print("picking colors...")
     print("colors available...",colors)
