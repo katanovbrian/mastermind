@@ -12,12 +12,12 @@ colors = [
 ]
 
 GUESSES_MAX = 12
-
+NUM_PEGS = 6
 
 def play_game():
     game = True
     shuffle(colors)
-    solution = choices(colors,k=4)
+    solution = choices(colors,k=NUM_PEGS)
     # print(solution)
     print("initializing...")
     print("picking colors...")
@@ -27,8 +27,8 @@ def play_game():
         print("guesses remaining:",guesses)
         guess = input("enter guess: ")
         guess = guess.lower().split()
-        if len(guess) != 4:
-            print("failure: you must enter a guess for all four pegs")
+        if len(guess) != NUM_PEGS:
+            print(f"failure: you must enter a guess for all {NUM_PEGS} pegs")
             print("try again...")
             guesses = guesses - 1
             continue
